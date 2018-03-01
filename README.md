@@ -1,0 +1,2 @@
+#Average Weight Program
+This is a simmple average weight program that tracks your weight entered, it also will list all the weights entered into the database, there is no DB file here at this point, but I will add it as soon as I get around to finding where it is located. 
