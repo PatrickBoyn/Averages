@@ -101,6 +101,8 @@ def weight_change():
     a,  = results2[0]
     b, = results3[0]
     diff = b - a
+    def two_recents():
+        #subtracts the most recent weights from each other
 
     print("The difference between highest and lowest weight was: \n " + str(round(diff, 1)))
 
