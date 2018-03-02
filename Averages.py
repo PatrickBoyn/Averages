@@ -130,6 +130,15 @@ def leave():
     quit()
 
 
+def help():
+    print("Here are your options: ")
+    print("Press a for weight averages.")
+    print("Press q to quit the program.")
+    print("Press w to list the weights in the database. ")
+    print("Press d to find the difference between the biggest and smallest weights.")
+    print("Press r to find the difference between the most recent weights. ")
+
+
 # I prefer methods and functions at the bottom of files. This is the Python way of handling that.
 if  __name__ == "__main__":
     try:
