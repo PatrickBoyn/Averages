@@ -4,7 +4,7 @@ import itertools
 
 #weight_id, weight, date_created
 # Enter a, q  or a number to the database.
-print("Please enter a for average weight, q for quit, w for the list of weights, d for the diffrence from starting to ending weight or a number to add into the database:  ")
+print("Please enter h, or H for help, otherwise enter a number:  ")
 AVERAGES = input()
 
 # connect to the database. 
