@@ -17,25 +17,29 @@ except psycopg2.OperationalError as e:
 
 def main():
     # Checks for a, q, w, d or a number.
-        if AVERAGES == "a":
-            get_averages()
-            CONN.close()
-        elif AVERAGES == "q":
-            leave()
-            CONN.close()
-        elif AVERAGES == "w":
-            list_weights()
-            get_date()
-            CONN.close()
-        elif AVERAGES == "d":
-            weight_change()
-            CONN.close()
-        elif AVERAGES == type(32) or type(32.5):
-            insert_weight()
-            CONN.close()
-        else:
-            print("Please type a, q, w, d or a number.")
-            CONN.close()
+       if AVERAGES == "h" or "H":
+           help()
+       
+       
+        # if AVERAGES == "a":
+        #     get_averages()
+        #     CONN.close()
+        # elif AVERAGES == "q":
+        #     leave()
+        #     CONN.close()
+        # elif AVERAGES == "w":
+        #     list_weights()
+        #     get_date()
+        #     CONN.close()
+        # elif AVERAGES == "d":
+        #     weight_change()
+        #     CONN.close()
+        # elif AVERAGES == type(32) or type(32.5):
+        #     insert_weight()
+        #     CONN.close()
+        # else:
+        #     print("Please type a, q, w, d or a number.")
+        #     CONN.close()
 
 
 def insert_weight():
@@ -131,6 +135,7 @@ def leave():
 
 
 def help():
+    # Prints the various things you can do with this program. 
     print("Here are your options: ")
     print("Press a for weight averages.")
     print("Press q to quit the program.")
