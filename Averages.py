@@ -87,6 +87,19 @@ def list_weights():
     print("Here is the list of weights you entered: ")
     print(formatted_results)
 
+def two_recents():
+    #subtracts the most recent weights from each other
+    psql6 = "SELECT weight FROM averages ORDER BY weight_id DESC limit 1 offset 1"
+    psql7 = "SELECT max(weight) FROM averages LIMIT 1"
+    CUR.execute(psql6)
+    results6 = CUR.fetchall()
+    CUR.execute(psql7)
+    results7 = CUR.fetchall()
+    a, = results6[0]
+    b, = results7[0]
+    diff = b -a
+    print(diff) 
+
 
 def weight_change():
     # Grabs the first and last number from the averages list.
@@ -101,8 +114,6 @@ def weight_change():
     a,  = results2[0]
     b, = results3[0]
     diff = b - a
-    def two_recents():
-        #subtracts the most recent weights from each other
 
     print("The difference between highest and lowest weight was: \n " + str(round(diff, 1)))
 
