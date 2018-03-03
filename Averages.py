@@ -19,6 +19,10 @@ def main():
     # Checks for a, q, w, d or a number.
        if AVERAGES == "h" or "H":
            help()
+       elif AVERAGES == type(1) or type(.4):
+            insert_weight()
+       else:
+            print("Please enter H/h or a number. ")
        
        
         # if AVERAGES == "a":
