@@ -17,13 +17,7 @@ except psycopg2.OperationalError as e:
 
 def main():
     # Checks for h, H, or a number.
-       if AVERAGES == type(1) or type(.4):
-            insert_weight()
-       elif AVERAGES == "h" or "H":
-           help()
-       else:
-            print("Please enter H/h or a number. ")
-       
+       pass
        
         # if AVERAGES == "a":
         #     get_averages()
@@ -46,6 +40,15 @@ def main():
         #     CONN.close()
 
 
+def logic_loop():
+       if AVERAGES == type(1) or type(.4):
+            insert_weight()
+       elif AVERAGES == "h" or "H":
+           help()
+       elif AVERAGES == "q" or "Q":
+           leave()
+       else:
+            print("Please enter H/h or a number. ")
 def insert_weight():
     #Inserts the value of the number entered into the average database.
     psql = "INSERT INTO averages(weight, date_created) values(%s, CURRENT_DATE)" % float(AVERAGES)
