@@ -16,11 +16,11 @@ except psycopg2.OperationalError as e:
 
 
 def main():
-    # Checks for a, q, w, d or a number.
-       if AVERAGES == "h" or "H":
-           help()
-       elif AVERAGES == type(1) or type(.4):
+    # Checks for h, H, or a number.
+       if AVERAGES == type(1) or type(.4):
             insert_weight()
+       elif AVERAGES == "h" or "H":
+           help()
        else:
             print("Please enter H/h or a number. ")
        
