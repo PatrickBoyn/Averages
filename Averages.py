@@ -17,8 +17,14 @@ except psycopg2.OperationalError as e:
 
 def main():
     # Checks for h, H, or a number.
-        logic_loop()
-       
+       if AVERAGES == type(1) or type(.4):
+           insert_weight()
+       elif AVERAGES == "h" or "H":
+           leave()
+       elif AVERAGES == "q" or "Q":
+           leave()
+       else:
+            print("Please enter H/h or a number. ")
         # if AVERAGES == "a":
         #     get_averages()
         #     CONN.close()
@@ -142,15 +148,6 @@ def help():
     print("Press d to find the difference between the biggest and smallest weights.")
     print("Press r to find the difference between the most recent weights. ")
 
-    def logic_loop():
-       if AVERAGES == "h" or "H":
-            help()
-       elif AVERAGES == type(1) or type(.4):
-           insert_weight()
-       elif AVERAGES == "q" or "Q":
-           leave()
-       else:
-            print("Please enter H/h or a number. ")
 
 # I prefer methods and functions at the bottom of files. This is the Python way of handling that.
 if  __name__ == "__main__":
