@@ -20,7 +20,7 @@ def main():
        if AVERAGES == type(1) or type(.4):
            insert_weight()
        elif AVERAGES == "h" or "H":
-           leave()
+           helper()
        elif AVERAGES == "q" or "Q":
            leave()
        else:
@@ -139,7 +139,7 @@ def leave():
     quit()
 
 
-def help():
+def helper():
     # Prints the various things you can do with this program. 
     print("Here are your options: ")
     print("Press a for weight averages.")
