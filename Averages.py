@@ -33,7 +33,7 @@ def main():
         elif AVERAGES == type(32) or type(32.5):
             insert_weight()
             CONN.close()
-        elif (AVERAGES == "h"):
+        elif AVERAGES == "h":
             helper()
             CONN.close()
         else:
@@ -47,18 +47,6 @@ def insert_weight():
     psql = "INSERT INTO averages(weight, date_created) values(%s, CURRENT_DATE)" % float(AVERAGES)
     CUR.execute(psql)
     CONN.commit()
-
-
-def get_date():    
-    psql8 = "SELECT date_created FROM averages"
-    CUR.execute(psql8)
-    results4 = CUR.fetchall()
-    unpacked, = results4[0]
-
-    if unpacked == None:
-        print("Still nothing here.")
-    else:
-        print(unpacked)
 
 
 def get_averages():
