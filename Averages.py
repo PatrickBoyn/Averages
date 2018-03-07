@@ -25,7 +25,6 @@ def main():
             CONN.close()
         elif AVERAGES == "w":
             list_weights()
-            get_date()
             CONN.close()
         elif AVERAGES == "d":
             weight_change()
