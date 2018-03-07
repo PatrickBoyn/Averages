@@ -41,7 +41,6 @@ def main():
             CONN.close()
 
 
-
 def insert_weight():
     #Inserts the value of the number entered into the average database.
     psql = "INSERT INTO averages(weight, date_created) values(%s, CURRENT_DATE)" % float(AVERAGES)
@@ -78,6 +77,7 @@ def list_weights():
     #Prints the results.
     print("Here is the list of weights you entered: ")
     print(formatted_results)
+
 
 def two_recents():
     #subtracts the most recent weights from each other
