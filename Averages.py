@@ -29,14 +29,11 @@ def main():
         elif AVERAGES == "d":
             weight_change()
             CONN.close()
+        elif AVERAGES == "h" or AVERAGES == "H":
+            helper()
+            CONN.close()
         elif AVERAGES == type(32) or type(32.5):
             insert_weight()
-            CONN.close()
-        elif AVERAGES == "h":
-            try:
-                helper()
-            except ValueError:
-                print("It still thinks you are trying to insert h into an integer column.")
             CONN.close()
         else:
             print("Please type a, q, w, d or a number.")
