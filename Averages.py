@@ -17,33 +17,27 @@ except psycopg2.OperationalError as e:
 
 def main():
     # Checks for h, H, or a number.
-       if AVERAGES == type(1) or type(.4):
-           insert_weight()
-       elif AVERAGES == "h" or "H":
-           helper()
-       elif AVERAGES == "q" or "Q":
-           leave()
-       else:
-            print("Please enter H/h or a number. ")
-        # if AVERAGES == "a":
-        #     get_averages()
-        #     CONN.close()
-        # elif AVERAGES == "q":
-        #     leave()
-        #     CONN.close()
-        # elif AVERAGES == "w":
-        #     list_weights()
-        #     get_date()
-        #     CONN.close()
-        # elif AVERAGES == "d":
-        #     weight_change()
-        #     CONN.close()
-        # elif AVERAGES == type(32) or type(32.5):
-        #     insert_weight()
-        #     CONN.close()
-        # else:
-        #     print("Please type a, q, w, d or a number.")
-        #     CONN.close()
+        if AVERAGES == "a":
+            get_averages()
+            CONN.close()
+        elif AVERAGES == "q":
+            leave()
+            CONN.close()
+        elif AVERAGES == "w":
+            list_weights()
+            get_date()
+            CONN.close()
+        elif AVERAGES == "d":
+            weight_change()
+            CONN.close()
+        elif AVERAGES == type(32) or type(32.5):
+            insert_weight()
+            CONN.close()
+        elif AVERAGES == "h" or "H":
+            helper()
+        else:
+            print("Please type a, q, w, d or a number.")
+            CONN.close()
 
 
 
