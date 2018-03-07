@@ -33,7 +33,10 @@ def main():
             insert_weight()
             CONN.close()
         elif AVERAGES == "h":
-            helper()
+            try:
+                helper()
+            except ValueError:
+                print("It still thinks you are trying to insert h into an integer column.")
             CONN.close()
         else:
             print("Please type a, q, w, d or a number.")
