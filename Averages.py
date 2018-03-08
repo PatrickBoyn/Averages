@@ -32,8 +32,6 @@ def main():
         elif AVERAGES == "h" or AVERAGES == "H":
             helper()
             CONN.close()
-        elif AVERAGES != "a" or "q" or "d" or "h" or "H":
-            print("Please type a, q, w, d, h, or H.")
         elif AVERAGES == type(35) or type(34.2):
             insert_weight()
             CONN.close()
