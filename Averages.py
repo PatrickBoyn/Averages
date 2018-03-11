@@ -1,7 +1,7 @@
 """Average weight program"""
 import psycopg2
 import itertools
-import time 
+import datetime 
 
 #weight_id, weight, date_created
 # Enter a, q  or a number to the database.
@@ -15,9 +15,9 @@ try:
 except psycopg2.OperationalError as e:
     print("No database by that name exists.")
 
-start = time.time()
-end = time.time()
-
+start = datetime.datetime.now()
+end = datetime.datetime.now()
+result = end - start
 
 def main():
     # Checks for h, H, or a number.
@@ -95,7 +95,7 @@ def two_recents():
     a, = results6[0]
     b, = results7[0]
     diff = b -a
-    print(diff) 
+    print("The difference in weights for the last two entries: " + str(diff)) 
 
 
 def weight_change():
@@ -141,7 +141,7 @@ def helper():
 if  __name__ == "__main__":
     try:
         main()
-        print("The time took "+ str(end - start))
+        print("The time took " + str(result))
     except NameError as e:
         print("No variable by that name exists."+ "\n"+ str(e))
   
