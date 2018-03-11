@@ -1,4 +1,4 @@
-"""Average number program"""
+"""Average weight program"""
 import psycopg2
 import itertools
 
@@ -32,6 +32,11 @@ def main():
         elif AVERAGES == "h" or AVERAGES == "H":
             helper()
             CONN.close()
+        elif AVERAGES == "r":
+            try:
+                two_recents()
+            except:
+                print("Something went wrong.")
         elif AVERAGES == type(35) or type(34.2):
             insert_weight()
             CONN.close()
