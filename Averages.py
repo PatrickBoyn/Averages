@@ -14,7 +14,7 @@ try:
     CUR = CONN.cursor()
 except psycopg2.OperationalError as e:
     print("No database by that name exists.")
-
+time.time = float(time.time())
 run_time  = time.time()
 
 
@@ -140,7 +140,7 @@ def helper():
 if  __name__ == "__main__":
     try:
         main()
-        print("***%s seconds to complete ****" % (float(time.time) - run_time))
+        print("*** %s seconds to complete ****" % (float(time.time) - run_time))
     except NameError as e:
         print("No variable by that name exists."+ "\n"+ str(e))
   
