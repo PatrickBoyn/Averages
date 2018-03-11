@@ -1,6 +1,7 @@
 """Average weight program"""
 import psycopg2
 import itertools
+import time
 
 #weight_id, weight, date_created
 # Enter a, q  or a number to the database.
@@ -13,6 +14,8 @@ try:
     CUR = CONN.cursor()
 except psycopg2.OperationalError as e:
     print("No database by that name exists.")
+
+run_time  = time.time()
 
 
 def main():
@@ -137,6 +140,7 @@ def helper():
 if  __name__ == "__main__":
     try:
         main()
+        print("***{} seconds to complete ****".format(time.time - start_time))
     except NameError as e:
         print("No variable by that name exists."+ "\n"+ str(e))
   
