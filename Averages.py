@@ -140,7 +140,7 @@ def helper():
 if  __name__ == "__main__":
     try:
         main()
-        print("***{} seconds to complete ****".format(time.time - start_time))
+        print("***%s seconds to complete ****" % (float(time.time) - run_time))
     except NameError as e:
         print("No variable by that name exists."+ "\n"+ str(e))
   
