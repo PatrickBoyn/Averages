@@ -135,6 +135,7 @@ def helper():
     print("Press w to list the weights in the database. ")
     print("Press d to find the difference between the biggest and smallest weights.")
     print("Press r to find the difference between the most recent weights. ")
+    print("The time at the bottom is how long it took the program to run. ")
 
 
 # I prefer methods and functions at the bottom of files. This is the Python way of handling that.
