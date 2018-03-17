@@ -135,10 +135,14 @@ def helper():
     print("Press w to list the weights in the database. ")
     print("Press d to find the difference between the biggest and smallest weights.")
     print("Press r to find the difference between the most recent weights. ")
+    print("Press * to delete the most recent row added. ")
     print("The time at the bottom is how long it took the program to run. ")
 
 
 def delete_recent():
+    psql8 = "DELETE FROM  averages WHERE weight_id = max(weight_id)"
+    CUR.execute(psql8)
+    CONN.close()
     pass
 
 
