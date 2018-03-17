@@ -139,11 +139,17 @@ def helper():
     print("The time at the bottom is how long it took the program to run. ")
 
 
+def update_rows():
+    psql9 = "UPDATE averages SET weight_id = max(weight_id -1) WHERE weight_id = max(weight_id)"
+    CUR.execute(psql9)
+
+
 def delete_recent():
     psql8 = "DELETE FROM  averages WHERE weight_id = max(weight_id)"
     CUR.execute(psql8)
+    update_rows()
     CONN.close()
-    pass
+    
 
 
 # I prefer methods and functions at the bottom of files. This is the Python way of handling that.
