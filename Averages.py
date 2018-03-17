@@ -138,6 +138,10 @@ def helper():
     print("The time at the bottom is how long it took the program to run. ")
 
 
+def delete_recent():
+    pass
+
+
 # I prefer methods and functions at the bottom of files. This is the Python way of handling that.
 if  __name__ == "__main__":
     try:
