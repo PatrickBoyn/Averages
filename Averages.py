@@ -144,12 +144,15 @@ def helper():
 def update_rows():
     psql9 = "UPDATE averages SET weight_id = max(weight_id -1) WHERE weight_id = max(weight_id)"
     CUR.execute(psql9)
+    CONN.commit()
 
 
 def delete_recent():
-    psql8 = "DELETE FROM  averages WHERE weight_id = max(weight_id)"
+    # Remember that you need commit when making any changes to a database.
+    psql8 = "DELETE FROM  averages WHERE weight_id = (SELECT max(weight_id) FROM averages)"
+  
     CUR.execute(psql8)
-    update_rows()
+    CONN.commit()
     CONN.close()
     
 
