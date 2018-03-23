@@ -41,6 +41,8 @@ def main():
                 two_recents()
             except:
                 print("Something went wrong.")
+        elif AVERAGES == "*":
+            delete_recent()
         elif AVERAGES == type(35) or type(34.2):
             insert_weight()
             CONN.close()
